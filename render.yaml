@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: n8n-ffmpeg
+    env: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_PORT
+        value: $PORT
+      - key: N8N_HOST
+        value: n8n-ffmpeg-ntoi.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://n8n-ffmpeg-ntoi.onrender.com
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: me@ebadmin.com
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: password123
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: aws-0-ap-southeast-1.pooler.supabase.com
+      - key: DB_POSTGRESDB_PORT
+        value: 6543
+      - key: DB_POSTGRESDB_DATABASE
+        value: postgres
+      - key: DB_POSTGRESDB_USER
+        value: postgres.mcdcdalsvttiudhkjpxm
+      - key: DB_POSTGRESDB_PASSWORD
+        value: S1fa@sembung
+      - key: DB_POSTGRESDB_SCHEMA
+        value: public
+      - key: GENERIC_TIMEZONE
+        value: Asia/Jakarta
